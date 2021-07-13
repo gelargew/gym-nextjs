@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import anime from 'animejs'
 import { useEffect, useLayoutEffect } from 'react'
+import { MainContainer } from '../components/commons'
 
 export default function Home() {
 
@@ -38,48 +39,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} onScroll={() => console.log(5)}>
-      <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id='lqbg' d="M385 650C497 560.5 644.5 684.5 786.5 662C893.457 645.052 1014 662 1093 620C1171.5 560.5 1319 465.5 1199.5 432.5C1077 411.5 994.5 299.5 896.5 504.5C828 636 606 404.5 457 542.5C322 650 252 422 82.0001 542.5C20.8971 585.811 183.5 762 385 650Z" fill="#C4C4C4"/>
-      </svg>
+        <MainContainer><h1>First page</h1></MainContainer>
+        <MainContainer><h1>second</h1></MainContainer>
+        <MainContainer><h1>Third</h1></MainContainer>
+        <MainContainer><h1>Fourth</h1></MainContainer>
+        <div>
+          <h1>Fifth</h1>
+        </div>
 
 
       </main>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
-      <h1>YAOO</h1>
+      {/* <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id='lqbg' d="M385 650C497 560.5 644.5 684.5 786.5 662C893.457 645.052 1014 662 1093 620C1171.5 560.5 1319 465.5 1199.5 432.5C1077 411.5 994.5 299.5 896.5 504.5C828 636 606 404.5 457 542.5C322 650 252 422 82.0001 542.5C20.8971 585.811 183.5 762 385 650Z" fill="#C4C4C4"/>
+      </svg> */}
     </div>
   )
 }
