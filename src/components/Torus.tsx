@@ -7,11 +7,15 @@ import { Suspense, useLayoutEffect, useRef, useState } from 'react'
 export const Torus = () => {
     return (
         <MainContainer>
+            
             <Canvas>
                 <Suspense fallback={null}>
                     <TorusMesh />
                 </Suspense>
             </Canvas>
+                    
+            
+            
         </MainContainer>
     )
 }
