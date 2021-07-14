@@ -2,12 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import anime from 'animejs'
-import { Suspense, useEffect, useLayoutEffect } from 'react'
+import { Suspense, useEffect, useLayoutEffect, useState } from 'react'
 import { MainContainer } from '../components/commons'
 import { Torus } from '../components/Torus'
 import { Spring } from '../components/Spring'
+import Viewer from '../components/App'
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
 
   const animate = () => anime({
     targets: '#lqbg',
@@ -24,7 +26,7 @@ export default function Home() {
   })
   useEffect(() => {
     const anim = animate()
-    const handleScroll = (e:Event) => console.log(e.target)
+    setIsLoading(false)
 
   },[animate])
   
@@ -43,6 +45,13 @@ export default function Home() {
       <main className={styles.main} onScroll={() => console.log(5)}>
         <Torus />
         <Spring />
+        {isLoading 
+        ? 
+        <MainContainer><h1>wait pls...</h1></MainContainer>
+        :
+        <MainContainer><Viewer /></MainContainer>
+        }
+        
         <MainContainer><h1>second</h1></MainContainer>
         <MainContainer><h1>Third</h1></MainContainer>
         <MainContainer><h1>Fourth</h1></MainContainer>
