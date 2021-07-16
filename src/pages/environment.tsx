@@ -5,7 +5,6 @@ import { Suspense, useEffect, useLayoutEffect, useState } from 'react'
 import { MainContainer } from '../components/commons'
 import { Torus } from '../components/Torus'
 import { Spring } from '../components/Spring'
-import Viewer from '../components/App'
 import Monke from '../monke/Monke'
 import { PlaneSect } from '../components/Plane'
 import Layout from '../components/Layout'
@@ -49,14 +48,7 @@ export default function Environment() {
             <PlaneSect />
             <Torus />
             <Spring />
-            <MainContainer><Monke /></MainContainer>
-            {isLoading 
-            ? 
-            <MainContainer><h1>wait pls...</h1></MainContainer>
-            :
-            <MainContainer><Viewer /></MainContainer>
-            }
-            
+            <MainContainer><Monke /></MainContainer>            
             <MainContainer><h1>second</h1></MainContainer>
             <MainContainer><h1>Third</h1></MainContainer>
             <MainContainer><h1>Fourth</h1></MainContainer>
