@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
+import { CanvasT, Boxs } from '../tutorial/CanvasT'
+import { Torus } from '../components/Torus'
 
 
 
@@ -18,8 +20,8 @@ export default function Home() {
         </Head>
 
         <main className={styles.main} onScroll={() => console.log(5)}>
-    
-          
+
+          <Torus />
 
         </main>
         {/* <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
