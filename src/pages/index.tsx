@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
 import { CanvasT, Boxs } from '../tutorial/CanvasT'
 import { Torus } from '../components/Torus'
+import { MainContainer } from '../components/commons'
+import SphereMaterial from '../tutorial/Shadows'
 
 
 
@@ -20,7 +22,9 @@ export default function Home() {
         </Head>
 
         <main className={styles.main} onScroll={() => console.log(5)}>
-
+          <MainContainer>
+            <SphereMaterial />
+          </MainContainer>
           <Torus />
 
         </main>
