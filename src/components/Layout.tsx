@@ -10,6 +10,9 @@ export default function Layout(props: { children: any}) {
                 <Link href='/environment'>
                     <a>env</a>
                 </Link>
+                <Link href='/soldier'>
+                    <a>&gt;DEMO</a>
+                </Link>
                 <Link href='/demos'>
                     <a>&gt;DEMO</a>
                 </Link>
