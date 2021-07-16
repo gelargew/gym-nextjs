@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
-import { CanvasT, Boxs } from '../tutorial/CanvasT'
 import { Torus } from '../components/Torus'
 import { MainContainer } from '../components/commons'
 import SphereMaterial from '../tutorial/Shadows'
