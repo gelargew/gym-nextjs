@@ -48,3 +48,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.navigation {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.navigation a {
+  mix-blend-mode: difference;
+  padding: 20;
+  font-size: 32px;
+}
