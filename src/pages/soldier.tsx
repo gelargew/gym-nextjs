@@ -3,15 +3,16 @@ import * as THREE from 'three'
 import { Suspense } from "react";
 import Layout from "../components/Layout";
 import { OrbitControls, TorusKnot, useGLTF } from "@react-three/drei";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { MainContainer } from "../components/commons";
 
-
+let GLTFLoader: any
 
 export default function Soldier() {
     
 
     return (
         <Layout>
+            <MainContainer>
             <Canvas>
                 
                 <Suspense fallback={null}>
@@ -20,20 +21,21 @@ export default function Soldier() {
                 
                 
             </Canvas>
+            </MainContainer>
         </Layout>
     )
 }
 
 const Model = () => {
-    const [texture] = useLoader(THREE.TextureLoader, ['/soldier.jpeg'])
-    const obj = useLoader(GLTFLoader, '/scene.gltf')
+  
+    GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader
+    const obj: any = useLoader(GLTFLoader, '/model.gltf')
+    console.log(obj)
     return (
         <>
-            <ambientLight intensity={0.6} />
-            <meshStandardMaterial 
-            map={texture}
-            />
-            <primitive object={obj} dispose={null} />
+            <ambientLight intensity={0.2} />
+            <primitive object={obj.scene} dispose={null} />
+            <TorusKnot />
             <OrbitControls />
         </>
     )
