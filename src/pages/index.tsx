@@ -4,6 +4,10 @@ import Layout from '../components/Layout'
 import { Torus } from '../components/Torus'
 import { MainContainer } from '../components/commons'
 import SphereMaterial from '../tutorial/Shadows'
+import { Canvas } from '@react-three/fiber'
+import { Suspense } from 'react'
+import { PerspectiveCamera } from '@react-three/drei'
+import { SoldierModel } from './soldier'
 
 
 
@@ -21,6 +25,17 @@ export default function Home() {
         </Head>
 
         <main className={styles.main} onScroll={() => console.log(5)}>
+        <MainContainer>
+          
+            <Canvas>
+                <PerspectiveCamera zoom={100}>
+                <Suspense fallback={null}>
+                    <SoldierModel />
+                </Suspense>
+                </PerspectiveCamera>              
+            </Canvas>
+            <h3 style={{ position: 'absolute', left: '30%', top: '80%'}}>rotate & zoom</h3>
+          </MainContainer>
           <MainContainer>
             <SphereMaterial />
           </MainContainer>
